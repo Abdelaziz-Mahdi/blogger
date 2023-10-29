@@ -124,7 +124,7 @@ Give a ⭐️ if you like this project!
 - [x] Project 1: Creating a data model.
 - [x] Project 2: Processing data in models.
 - [x] Project 3: Validations and model specs.
-- [ ] Project 4: Add controllers.
+- [x] Project 4: Add controllers.
 - [ ] Project 5: Controllers specs.
 - [ ] Project 6: Add views.
 - [ ] Project 7: Add Forms.
