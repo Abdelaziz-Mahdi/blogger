@@ -35,14 +35,14 @@ RSpec.describe 'Posts', type: :request do
   describe 'GET /users/:user_id/posts' do
     it 'Action index works! include("Here is a list of posts for a given user")' do
       get user_posts_path(1)
-      expect(response.body).to include("Here is a list of posts for a given user")
+      expect(response.body).to include('Here is a list of posts for a given user')
     end
   end
 
   describe 'GET /users/:user_id/posts/:id' do
     it 'Action show works! include("Here is a post for a given user")' do
       get user_post_path(1, 1)
-      expect(response.body).to include("Here is a post for a given user")
+      expect(response.body).to include('Here is a post for a given user')
     end
   end
 end
