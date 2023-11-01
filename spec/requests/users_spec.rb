@@ -16,7 +16,7 @@ RSpec.describe 'Users', type: :request do
     end
   end
 
-  #If a correct template was rendered.
+  # If a correct template was rendered.
   describe 'GET /users' do
     it 'Action index works! render_template(:index)' do
       get users_path
@@ -28,6 +28,21 @@ RSpec.describe 'Users', type: :request do
     it 'Action show works! render_template(:show)' do
       get user_path(1)
       expect(response).to render_template(:show)
+    end
+  end
+
+  # If the response body includes correct placeholder text.
+  describe 'GET /users' do
+    it 'Action index works! include("Here is a list of all users")' do
+      get users_path
+      expect(response.body).to include("Here is a list of all users")
+    end
+  end
+
+  describe 'GET /users/:id' do
+    it 'Action show works! include("Here is a profile for a given user")' do
+      get user_path(1)
+      expect(response.body).to include("Here is a profile for a given user")
     end
   end
 end
