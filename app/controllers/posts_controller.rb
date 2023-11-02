@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.includes(:author, :likes, comments: [:user] ).find_by_id(params[:id])
+    @post = Post.includes(:author, :likes, comments: [:user]).find_by_id(params[:id])
     @post_comments = @post.comments
     @post_like = @post.likes[0]
     @post_author = @post.author
