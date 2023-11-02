@@ -11,3 +11,8 @@ a {
 ul {
   padding: 0 !important;
 }
+
+.pagination span {
+  margin: 0 5px;
+  padding: 0 5px;
+}
