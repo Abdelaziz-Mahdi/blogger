@@ -1,12 +1,17 @@
 <%= link_to users_path do %>
-<%= render partial: "user", locals: { user: User.find(params[:id]) } %>
+  <%= render partial: "user", locals: { user: User.find(params[:id]) } %>
 <% end %>
+
 <section class="card m-3">
   <div class="card-body">
     <h5 class="card-title">Bio</h5>
     <p class="card-text"><%= @user.bio %></p>
   </div>
 </section>
+
+<div class="d-flex ms-3 me-3">
+    <%= link_to "Add New Post", new_user_post_path(@user), class: "col btn btn-outline-secondary"%>
+</div>
 
 <ul>
   <% @user.three_most_recent_posts.each_with_index do |post , i| %>
@@ -17,6 +22,7 @@
     </li>
   <% end %>
 </ul>
+
 <div class="text-center m-3 mb-4">
-<%= link_to "See all posts", user_posts_path(@user), class: "btn btn-outline-secondary p-2"%>
+  <%= link_to "See all posts", user_posts_path(@user), class: "btn btn-outline-secondary p-2"%>
 </div>
