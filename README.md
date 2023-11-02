@@ -2,7 +2,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="LOGO_ICON.png" alt="logo" width="140"  height="auto" />
+  <img src="public/LOGO_ICON.png" alt="logo" width="140"  height="auto" />
   <br/>
   <h3><b>BLOGGER</b></h3>
 </div>
