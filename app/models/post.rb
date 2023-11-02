@@ -10,6 +10,8 @@ class Post < ApplicationRecord
   validates :comments_counter, numericality: { greater_than_or_equal_to: 0 }
   validates :likes_counter, numericality: { greater_than_or_equal_to: 0 }
 
+  paginates_per 3 # kaminari pagination
+
   def last_five_comments
     comments.order(created_at: :desc).limit(5)
   end

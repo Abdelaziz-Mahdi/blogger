@@ -126,7 +126,7 @@ Give a ⭐️ if you like this project!
 - [x] Project 3: Validations and model specs.
 - [x] Project 4: Add controllers.
 - [x] Project 5: Controllers specs.
-- [ ] Project 6: Add views.
+- [x] Project 6: Add views.
 - [ ] Project 7: Add Forms.
 - [ ] Project 8: Intergration specs, and n+1 problems.
 - [ ] Project 9: Add Devise.
