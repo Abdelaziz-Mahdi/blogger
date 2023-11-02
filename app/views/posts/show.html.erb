@@ -1,2 +1,22 @@
-<h1>Posts#show</h1>
-<p>Here is a post for a given user</p>
+<%= link_to user_posts_path(@post_author.id) do %>
+  <article class="card mt-3 ms-3 me-3">
+    <div class="card-body">
+      <div class="d-flex justify-content-between">
+        <h5 class="card-title"><%= @post.title %> by <%= @post_author.name %></h5>
+        <p class="card-text text-end">
+          <small class="text-body-secondary">
+            Comments: <%= @post.comments_counter %>,
+            Likes: <%= @post.likes_counter %>
+          </small>
+        </p>
+      </div>
+      <p class="card-text"><%= @post.text %></p>
+    </div>
+  </article>
+<% end %>
+
+<section class="show-comments">
+  <% if @post_comments.present? %>
+    <%= render partial: "comments/comment", locals: { comments: @post_comments, user: @post_comment_author } %>
+  <% end %>
+</section>
