@@ -134,7 +134,7 @@ Give a ⭐️ if you like this project!
 - [x] Project 5: Controllers specs.
 - [x] Project 6: Add views.
 - [x] Project 7: Add Forms.
-- [ ] Project 8: Intergration specs, and n+1 problems.
+- [x] Project 8: Intergration specs, and n+1 problems.
 - [ ] Project 9: Add Devise.
 - [ ] Project 10: Add authorization rules.
 - [ ] Project 11: Add API endpoints.
