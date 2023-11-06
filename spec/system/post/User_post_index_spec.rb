@@ -4,16 +4,15 @@ RSpec.describe 'Integration test for users posts index page', type: :system do
   before(:each) do
     driven_by(:rack_test)
     first_user = User.create(name: 'Tom', photo: 'https://ui-avatars.com/api/?name=Tom', bio: 'Teacher from Mexico.')
-    Post.create(author: User.find_by(name: 'Tom'),title: 'Test 1',text: 'Post Text')
-    second_post = Post.create(author: User.find_by(name: 'Tom'),title: 'Test 2',text: 'Post 2 Text')
-    Post.create(author: User.find_by(name: 'Tom'),title: 'Test 3',text: 'Post 3 Text')
-    Post.create(author: User.find_by(name: 'Tom'),title: 'Test 4',text: 'Post 4 Text')
-    Comment.create(post: second_post, user: first_user, text: 'Hi Tom!' )
+    Post.create(author: User.find_by(name: 'Tom'), title: 'Test 1', text: 'Post Text')
+    second_post = Post.create(author: User.find_by(name: 'Tom'), title: 'Test 2', text: 'Post 2 Text')
+    Post.create(author: User.find_by(name: 'Tom'), title: 'Test 3', text: 'Post 3 Text')
+    Post.create(author: User.find_by(name: 'Tom'), title: 'Test 4', text: 'Post 4 Text')
+    Comment.create(post: second_post, user: first_user, text: 'Hi Tom!')
     visit user_posts_path(User.find_by(name: 'Tom'))
   end
 
   describe 'check for the things in the page' do
-
     it 'has a profile picture for the user' do
       expect(page).to have_css("img[src*='https://ui-avatars.com/api/?name=Tom']")
     end
@@ -56,10 +55,9 @@ RSpec.describe 'Integration test for users posts index page', type: :system do
   end
 
   describe 'check clicking links' do
-
     it 'click a user post, it redirects to that post show page' do
       click_link('Test 2')
-      expect(page).to have_current_path(user_post_path(User.find_by(name: 'Tom'),Post.find_by(title: 'Test 2')))
+      expect(page).to have_current_path(user_post_path(User.find_by(name: 'Tom'), Post.find_by(title: 'Test 2')))
     end
   end
 end
