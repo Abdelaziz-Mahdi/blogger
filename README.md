@@ -105,6 +105,12 @@ Run the following commands on your terminal:
 - LinkedIn: [in/abdelaziz-mahdi](https://www.linkedin.com/in/abdelaziz-mahdi)
 
 
+👨🏼‍🚀 **Juan Diego Guerra (JD)** 👾
+
+- GitHub: [@JuanDiegoGuerra](https://github.com/JuanDiegoGuerra)
+- LinkedIn: [Juan Guerra](https://www.linkedin.com/in/juan-guerra-65076b1ba/)
+- Twitter: [TwitterHandle]()
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
