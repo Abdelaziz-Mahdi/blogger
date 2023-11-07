@@ -7,3 +7,13 @@ RSpec.describe 'Integration test for users index', type: :system do
     Post.create(author: User.find_by(name: 'Tom'),title: 'Test',text: 'Post Text')
     visit root_path
   end
+  
+  describe 'check for the things in the page' do
+    it 'has a list of users' do
+      expect(page).to have_content('Tom')
+      expect(page).to have_content('Lilly')
+    end
+    it 'has a profile picture for each user' do
+      expect(page).to have_css("img[src*='https://ui-avatars.com/api/?name=Tom']")
+      expect(page).to have_css("img[src*='https://ui-avatars.com/api/?name=Li']")
+    end
