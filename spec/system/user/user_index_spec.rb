@@ -26,4 +26,9 @@ RSpec.describe 'Integration test for users index', type: :system do
         click_link('Tom')
         expect(page).to have_current_path(user_path(User.find_by(name: 'Tom')))
     end
-  
+    it 'will redirected to user Lilly show page' do
+        click_link('Lilly')
+        expect(page).to have_current_path(user_path(User.find_by(name: 'Lilly')))
+      end
+    end
+  end
