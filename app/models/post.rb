@@ -13,7 +13,7 @@ class Post < ApplicationRecord
   paginates_per 3 # kaminari pagination
 
   def last_five_comments
-    comments.order(created_at: :desc).limit(5)
+    comments.order(created_at: :desc).limit(5).includes(:user)
   end
 
   private

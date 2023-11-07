@@ -6,7 +6,7 @@
       <li>
         <%= link_to user_post_path(params[:user_id].to_i, post.id) do %>
           <%= render partial: "post", locals: { post: post, i: i } %>
-          <% if post.last_five_comments.present? %>
+          <% if post.comments_counter != 0 %>
             <%= render partial: "comments/comment", locals: { comments: post.last_five_comments } %>
           <% end %>
         <% end %>
