@@ -98,7 +98,7 @@ Run the following commands on your terminal:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Abdelaziz Mahdi**
+👨🏼‍🚀 **Abdelaziz Mahdi** 🐱‍👤
 
 - GitHub: [@Abdelaziz-Mahdi](https://github.com/Abdelaziz-Mahdi)
 - Twitter: [@_AbdelazizMahdi](https://twitter.com/_AbdelazizMahdi)
@@ -109,7 +109,6 @@ Run the following commands on your terminal:
 
 - GitHub: [@JuanDiegoGuerra](https://github.com/JuanDiegoGuerra)
 - LinkedIn: [Juan Guerra](https://www.linkedin.com/in/juan-guerra-65076b1ba/)
-- Twitter: [TwitterHandle]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -141,7 +140,7 @@ Give a ⭐️ if you like this project!
 - [x] Project 6: Add views.
 - [x] Project 7: Add Forms.
 - [x] Project 8: Intergration specs, and n+1 problems.
-- [ ] Project 9: Add Devise.
+- [x] Project 9: Add Devise.
 - [ ] Project 10: Add authorization rules.
 - [ ] Project 11: Add API endpoints.
 
