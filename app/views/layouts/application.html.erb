@@ -20,8 +20,11 @@
       </div>
     <% end %>
     <% unless !user_signed_in? %>
+      
       <div class="d-flex flex-row-reverse">
+      
         <%= button_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo_action: 'replace' }, class:'btn btn-outline-secondary m-3' %>
+        <h6 class= 'mt-4 text-body-secondary'>Logged in as: <%= current_user.name %></h6>
       </div>
     <% end %>
     <%= yield %>
