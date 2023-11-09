@@ -73,4 +73,5 @@ group :test do
   gem 'capybara'
 end
 
+gem 'cancancan'
 gem 'devise', '~> 4.9'

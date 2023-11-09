@@ -10,4 +10,14 @@ class CommentsController < ApplicationController
       flash[:warning] = 'Comment cannot be empty!'
     end
   end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    if @comment.destroy
+      flash[:success] = 'Comment deleted'
+    else
+      flash[:warning] = 'Comment cannot be deleted'
+    end
+    redirect_to request.referrer
+  end
 end

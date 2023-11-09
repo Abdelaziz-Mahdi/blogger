@@ -9,16 +9,16 @@
   </div>
 </section>
 
-<div class="d-flex ms-3 me-3">
+<% if current_user == @user %>
+  <div class="d-flex ms-3 me-3">
     <%= link_to "Add New Post", new_user_post_path(@user), class: "col btn btn-outline-secondary"%>
-</div>
+  </div>
+<% end %>
 
 <ul>
   <% @user.three_most_recent_posts.each_with_index do |post , i| %>
     <li>
-      <%= link_to user_post_path(params[:id].to_i, post.id) do %>
       <%= render partial: "posts/post", locals: { post: post, i: i } %>
-      <% end %>
     </li>
   <% end %>
 </ul>

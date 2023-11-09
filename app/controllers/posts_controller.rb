@@ -27,4 +27,14 @@ class PostsController < ApplicationController
     @post_author = @post.author
     @post_comment_author = @post_comments.map(&:user).flatten
   end
+
+  def destroy
+    @post = Post.find(params[:id])
+    if @post.destroy
+      flash[:success] = 'Post deleted successfully!'
+    else
+      flash[:warning] = 'Post not deleted!'
+    end
+    redirect_to request.referrer
+  end
 end
