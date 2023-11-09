@@ -1,8 +1,13 @@
-<ul class="card ms-3 me-3 mt-1 p-2">
+<ul class="card ms-3 me-3 mt-1 p-3">
   <% comments.each do |comment| %>
-    <li>
-      <span class="p1"><%= comment.user.name %>: </span>
-      <span class="p1"><%= comment.text %></span>
+    <li class= 'd-flex justify-content-between mb-3'>
+      <div>
+        <span class="p1"><%= comment.user.name %>: </span>
+        <span class="p1"><%= comment.text %></span>
+      </div>
+      <% if comment.user_id == current_user.id || can?(:destroy, current_user) %>
+        <%= button_to "Delete", user_post_comment_path(comment.user_id, comment.post_id, comment.id), method: :delete, class: "btn btn-outline-secondary" %>
+      <% end %>
     </li>
   <% end %>
 </ul>
