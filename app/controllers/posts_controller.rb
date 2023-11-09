@@ -32,10 +32,9 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if @post.destroy
       flash[:success] = 'Post deleted successfully!'
-      redirect_to user_posts_path
     else
       flash[:warning] = 'Post not deleted!'
-      redirect_to request.referrer
     end
+    redirect_to request.referrer
   end
 end
