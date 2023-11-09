@@ -10,6 +10,7 @@ class CommentsController < ApplicationController
       flash[:warning] = 'Comment cannot be empty!'
     end
   end
+
   def destroy
     @comment = Comment.find(params[:id])
     if @comment.destroy
