@@ -142,7 +142,7 @@ Give a ⭐️ if you like this project!
 - [x] Project 8: Intergration specs, and n+1 problems.
 - [x] Project 9: Add Devise.
 - [x] Project 10: Add authorization rules.
-- [ ] Project 11: Add API endpoints.
+- [x] Project 11: Add API endpoints.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
