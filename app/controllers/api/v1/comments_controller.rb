@@ -2,7 +2,7 @@ class Api::V1::CommentsController < ApiController
   include ActionController::HttpAuthentication::Token::ControllerMethods
 
   def current_user
-    authenticate_with_http_token do |token, options|
+    authenticate_with_http_token do |token, _options|
       User.find(JsonWebToken.decode(token)[:user_id])
     end
   end
