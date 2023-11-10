@@ -75,3 +75,7 @@ end
 
 gem 'cancancan'
 gem 'devise', '~> 4.9'
+
+# Gem for API
+gem 'active_model_serializers'
+gem 'jwt'
